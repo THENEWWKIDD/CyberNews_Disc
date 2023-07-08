@@ -396,3 +396,44 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Those in https://github.com/discordjs/discord.js/blob/main/.gitignore missing here
+
+# Logs
+logs
+npm-debug.log*
+
+# Runtime Data
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Env
+.env
+
+# Dist
+dist
+dist-docs
+
+# Misc
+.idea
+.DS_Store
+.turbo
+tsconfig.tsbuildinfo
+coverage
+out
+
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Cache
+.prettiercache
+.eslintcache
+.vercel
