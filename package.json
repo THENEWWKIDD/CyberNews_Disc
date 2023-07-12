@@ -4,7 +4,8 @@
   "description": "A web-scraping Discord-based bot that uses thehackernews.com as a source for recent Cybersecurity news and happenings around the world.",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/THENEWWKIDD/CyberNews_Disc#readme",
   "dependencies": {
     "discord.js": "^14.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.44.0"
   }
 }
