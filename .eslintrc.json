@@ -1,0 +1,105 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+		"node": true,
+		"es6": true
+	},
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+	},
+    "rules":{
+        //have curly braces in arrows when needed and require return for object literals
+        "arrow-body-style":["error", "as-needed", { "requireReturnForObjectLiteral": true }],
+        //space before and after arrows
+        "arrow-spacing":"error",
+        //forces stroustrup curly brace style
+        "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
+        //camelcase naming convention
+        "camelcase":"error",
+        //disallow trailing/unnecessary commas
+        "comma-dangle":"error",
+        //no space before comma, space after comma enforced
+        "comma-spacing":"error",
+        //commas for multiline parts of code has to be at the end of a line
+        "comma-style":"error",
+        //curly braces for multi line if/elses keeping it consistent for else/else if with if.
+        "curly": ["error", "multi-or-nest","consistent"],
+        //. for multiline code should be on properties (begining of new line)
+        "dot-location": ["error", "property"],
+        //enforces use of === and !== (except for: comparing two literal values, evaluating typeof, and comparing with null)
+        "eqeqeq":["error", "smart"],
+        //force indents and the "indents" are two spaces
+        "indent":["error", 2],
+        //forces space before and after keywords where necessary
+        "key-spacing":"error",
+        //warn for when a function goes over a certain number of lines
+        "max-lines-per-function":["warn", 25],
+        //4 nested only
+        "max-nested-callbacks":["error", { "max":4 }],
+        //1 statement max per line
+        "max-statements-per-line":"error",
+        //no array constructor (no new Array(1,2,3) instead use [1, 2, 3])
+        "no-array-constructor":"error",
+        //warns on console functions we can use but we should not commit to the code
+        "no-console":"warn",
+        //no file is repeated on importing
+        "no-duplicate-imports":"error",
+        //no empty functions, if empty must add comment inside
+        "no-empty-function": "error",
+        //decimal must have a number on both sides
+        "no-floating-decimal": "error",
+        //comments should be on their own line
+        "no-inline-comments": "error",
+        //disallow if statements as the only statement in else blocks
+        "no-lonely-if": "error",
+        //https://eslint.org/docs/latest/rules/no-magic-numbers
+        "no-magic-numbers":["warn", {"ignore": [0, 1, 2]}],
+        //no extra spaces
+        "no-multi-spaces": "error",
+        //no more than: 2 empty lines in a row, 1 empty line at the end of the file, 0 empty lines at the begining of a file
+        "no-multiple-empty-lines": ["error", {
+            "max": 2,
+            "maxEOF": 1,
+            "maxBOF": 0 
+        }],
+        //no nested turnaries
+        "no-nested-ternary":"error",
+        //no same variable declaration when same variable name is declared in an outerscope, with the exception to: "err", "resolve", "reject"
+        "no-shadow": ["error", { "allow": ["err", "resolve", "reject"] }],
+        //cannot throw literals
+        "no-throw-literal":"error",
+        //no spaces at the end of a line
+        "no-trailing-spaces":"error",
+        //no _ at begining or end of variable name (except for when the variable name is _)
+        "no-underscore-dangle":"error",
+        //no var
+        "no-var":"error",
+        //requires spaces in
+        "object-curly-spacing": ["error", "always"],
+        //if never reassigned use const except for a destructuring case
+        "prefer-const":["error", { "destructuring":"any" }],
+        //uses single quotes for strings ' only exception are cases that use back ticks ` when necessary
+        "quotes":["error", "single"],
+        //async must have an await
+        "require-await":"error",
+        //always have semi colon
+        "semi":["error", "always"],
+        //require space before codeblocks
+        "space-before-blocks": "error",
+        //only space before function parenths for async arrow functions
+        "space-before-function-paren": ["error", {
+			"anonymous": "never",
+			"named": "never",
+			"asyncArrow": "always"
+		}],
+        //no spaces (here /*code*/ here)
+        "space-in-parens": "error",
+        //space around operators
+        "space-infix-ops": "error",
+        //space after unary word operators none before/after nonwords
+        "space-unary-ops": "error",
+        //comparing literals and variables, literals must come second
+        "yoda":"error"
+    }
+}
